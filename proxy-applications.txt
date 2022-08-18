@@ -1,0 +1,5 @@
+payload:
+  - PROCESS-NAME, Steam,
+  - PROCESS-NAME, Steam.exe
+  - PROCESS-NAME, Discord
+  - PROCESS-NAME, Discord.exe
