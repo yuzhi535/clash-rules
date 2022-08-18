@@ -43,7 +43,3 @@ payload:
   - PROCESS-NAME,transmission-qt.exe
   - PROCESS-NAME,uTorrent.exe
   - PROCESS-NAME,WebTorrent.exe
-  - PROCESS-NAME, Steam,
-  - PROCESS-NAME, Steam.exe
-  - PROCESS-NAME, Discord
-  - PROCESS-NAME, Discord.exe
