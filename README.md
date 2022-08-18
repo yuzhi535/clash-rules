@@ -142,6 +142,13 @@ rule-providers:
     url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
+    
+  proxy-applications:
+    type: http
+    behavior: classical
+    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-applications.txt"
+    path: ./ruleset/proxy-applications.yaml
+    interval: 86400
 ```
 
 #### 白名单模式 Rules 配置方式（推荐）
@@ -154,6 +161,7 @@ rule-providers:
 ```yaml
 rules:
   - RULE-SET,applications,DIRECT
+  - RULE-SET,proxy-applications,PROXY
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
@@ -179,6 +187,7 @@ rules:
 ```yaml
 rules:
   - RULE-SET,applications,DIRECT
+  - RULE-SET,proxy-applications,PROXY
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
