@@ -3,4 +3,7 @@ payload:
   - PROCESS-NAME,QQ.exe
   - PROCESS-NAME,WeChat
   - PROCESS-NAME,WeChat.exe
-  - PROCESS-NAME,WeChat.exe
+  - PROCESS-NAME,wpsoffice
+  - PROCESS-NAME,wpsoffice.exe
+  - PROCESS-NAME,wpscloudsvr
+  - PROCESS-NAME,wpscloudsvr.exe
