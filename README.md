@@ -117,18 +117,11 @@ rule-providers:
     path: ./ruleset/proxy-applications.yaml
     interval: 86400
   
-  direct-epicgames:
+  epicgames:
     type: http
     behavior: domain
-    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/direct-epicgames.txt"
-    path: ./ruleset/direct-epicgames.yaml
-    interval: 86400
-  
-  proxy-epicgames:
-    type: http
-    behavior: domain
-    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-epicgames.txt"
-    path: ./ruleset/proxy-epicgames.yaml
+    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/epicgames.txt"
+    path: ./ruleset/epicgames.yaml
     interval: 86400
 ```
 
@@ -143,12 +136,10 @@ rule-providers:
 rules:
   - RULE-SET,applications,🎯 全球直连
   - RULE-SET, Steam, Steam
-  - RULE-SET, China, 🎯 全球直连
   - RULE-SET,proxy-applications,🔰 节点选择
   - DOMAIN,clash.razord.top,🎯 全球直连
   - DOMAIN,yacd.haishan.me,🎯 全球直连
-  - DOMAIN,direct-epicgames,🎯 全球直连
-  - DOMAIN,proxy-epicgames,🔰 节点选择
+  - DOMAIN,epicgames,EpicGames
   - RULE-SET,private,🎯 全球直连
   - RULE-SET,reject,⛔️ 广告拦截
   - RULE-SET,icloud,🔰 节点选择
