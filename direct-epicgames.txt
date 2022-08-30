@@ -1,0 +1,3 @@
+payload:
+  - 'download.epicgames.com'  # 下载直连
+  
