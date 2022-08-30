@@ -135,11 +135,11 @@ rule-providers:
 ```yaml
 rules:
   - RULE-SET,applications,🎯 全球直连
-  - RULE-SET, Steam, Steam
+  - RULE-SET,epicgames,EpicGames
+  - RULE-SET,Steam,Steam
   - RULE-SET,proxy-applications,🔰 节点选择
   - DOMAIN,clash.razord.top,🎯 全球直连
   - DOMAIN,yacd.haishan.me,🎯 全球直连
-  - DOMAIN,epicgames,EpicGames
   - RULE-SET,private,🎯 全球直连
   - RULE-SET,reject,⛔️ 广告拦截
   - RULE-SET,icloud,🔰 节点选择
