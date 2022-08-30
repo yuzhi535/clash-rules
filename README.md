@@ -149,6 +149,20 @@ rule-providers:
     url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-applications.txt"
     path: ./ruleset/proxy-applications.yaml
     interval: 86400
+  
+  direct-epicgames:
+    type: http
+    behavior: domain
+    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/direct-epicgames.txt"
+    path: ./ruleset/direct-epicgames.yaml
+    interval: 86400
+  
+  proxy-epicgames:
+    type: http
+    behavior: domain
+    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-epicgames.txt"
+    path: ./ruleset/proxy-epicgames.yaml
+    interval: 86400
 ```
 
 #### 白名单模式 Rules 配置方式（推荐）
@@ -164,6 +178,8 @@ rules:
   - RULE-SET,proxy-applications,PROXY
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,direct-epicgames,DIRECT
+  - DOMAIN,proxy-epicgames,PROXY
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
@@ -213,6 +229,4 @@ rules:
 - [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
 - [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)
 
-## 项目 Star 数增长趋势
 
-[![Stargazers over time](https://starchart.cc/Loyalsoldier/clash-rules.svg)](https://starchart.cc/Loyalsoldier/clash-rules)
