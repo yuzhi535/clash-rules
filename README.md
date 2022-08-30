@@ -1,39 +1,6 @@
+
 # 简介
-
-本项目生成适用于 [**Clash Premium 内核**](https://github.com/Dreamacro/clash/releases/tag/premium)的规则集（RULE-SET），同时适用于所有使用 Clash Premium 内核的 Clash 图形用户界面（GUI）客户端。使用 GitHub Actions 北京时间每天早上 6:30 自动构建，保证规则最新。
-
-## 说明
-
-本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) 和 [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)；[`Apple`](https://github.com/Loyalsoldier/clash-rules/blob/release/apple.txt) 和 [`Google`](https://github.com/Loyalsoldier/clash-rules/blob/release/google.txt) 列表里的域名来源于项目 [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)；中国大陆 IPv4 地址数据使用 [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)。
-
-本项目的规则集（RULE-SET）只适用于 Clash **Premium** 版本。Clash Premium 相对于普通版，增加了 **TUN 增强模式**，能接管设备所有 TCP 和 UDP 流量，类似 [Surge for Mac](https://nssurge.com) 的增强模式。更多高级特性请看[官方 wiki](https://github.com/Dreamacro/clash/wiki/premium-core-features)。
-
-### Clash Premium 各版本下载地址
-
-- Clash Premium **命令行**版（适用于 Windows、macOS、Linux、OpenWRT 等多种平台）：[https://github.com/Dreamacro/clash/releases/tag/premium](https://github.com/Dreamacro/clash/releases/tag/premium)
-- Clash Premium **图形用户界面**版：
-  - [ClashX Pro](https://install.appcenter.ms/users/clashx/apps/clashx-pro/distribution_groups/public)（适用于 macOS）
-  - [Clash for Windows](https://github.com/Fndroid/clash_for_windows_pkg/releases)（适用于 Windows、macOS）
-  - [Clash for Android](https://github.com/Kr328/ClashForAndroid/releases)（适用于 Android）
-
-## 规则文件地址及使用方式
-
-### 在线地址（URL）
-
-- **直连域名列表 direct.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt)
-- **代理域名列表 proxy.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt)
-- **广告域名列表 reject.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt)
-- **私有网络专用域名列表 private.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt)
-- **Apple 在中国大陆可直连的域名列表 apple.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt)
-- **iCloud 域名列表 icloud.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt)
-- **[慎用]Google 在中国大陆可直连的域名列表 google.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt)
-- **GFWList 域名列表 gfw.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt)
-- **GreatFire 域名列表 greatfire.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt)
-- **非中国大陆使用的顶级域名列表 tld-not-cn.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt)
-- **Telegram 使用的 IP 地址列表 telegramcidr.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt)
-- **局域网 IP 及保留 IP 地址列表 lancidr.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt)
-- **中国大陆 IP 地址列表 cncidr.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt)
-- **需要直连的常见软件列表 applications.txt**：[https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt](https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt)
+自用clash规则
 
 ### 使用方式
 
@@ -165,7 +132,7 @@ rule-providers:
     interval: 86400
 ```
 
-#### 白名单模式 Rules 配置方式（推荐）
+#### Rules 配置方式（推荐）
 
 - 白名单模式，意为「**没有命中规则的网络流量，统统使用代理**」，适用于服务器线路网络质量稳定、快速，不缺服务器流量的用户。
 - 以下配置中，除了 `DIRECT` 和 `REJECT` 是默认存在于 Clash 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 `proxies` 或 `proxy-groups` 中的 `name`。如你直接使用下面的 `rules` 规则，则需要在 `proxies` 或 `proxy-groups` 中手动配置一个 `name` 为 `PROXY` 的 policy。
@@ -174,59 +141,26 @@ rule-providers:
 
 ```yaml
 rules:
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,proxy-applications,PROXY
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,direct-epicgames,DIRECT
-  - DOMAIN,proxy-epicgames,PROXY
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,PROXY
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,PROXY
-  - GEOIP,LAN,DIRECT
-  - GEOIP,CN,DIRECT
-  - MATCH,PROXY
+  - RULE-SET,applications,🎯 全球直连
+  - RULE-SET, Steam, Steam
+  - RULE-SET, China, 🎯 全球直连
+  - RULE-SET,proxy-applications,🔰 节点选择
+  - DOMAIN,clash.razord.top,🎯 全球直连
+  - DOMAIN,yacd.haishan.me,🎯 全球直连
+  - DOMAIN,direct-epicgames,🎯 全球直连
+  - DOMAIN,proxy-epicgames,🔰 节点选择
+  - RULE-SET,private,🎯 全球直连
+  - RULE-SET,reject,⛔️ 广告拦截
+  - RULE-SET,icloud,🔰 节点选择
+  - RULE-SET,apple,🔰 节点选择
+  - RULE-SET,google,🔰 节点选择
+  - RULE-SET,proxy,🔰 节点选择
+  - RULE-SET,direct,🎯 全球直连
+  - RULE-SET,lancidr,🎯 全球直连
+  - RULE-SET,cncidr,🎯 全球直连
+  - RULE-SET,telegramcidr,📲 电报信息
+  - GEOIP,LAN,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🔰 节点选择
 ```
-
-#### 黑名单模式 Rules 配置方式
-
-- 黑名单模式，意为「**只有命中规则的网络流量，才使用代理**」，适用于服务器线路网络质量不稳定或不够快，或服务器流量紧缺的用户。通常也是软路由用户、家庭网关用户的常用模式。
-- 以下配置中，除了 `DIRECT` 和 `REJECT` 是默认存在于 Clash 中的 policy（路由策略/流量处理策略），其余均为自定义 policy，对应配置文件中 `proxies` 或 `proxy-groups` 中的 `name`。如你直接使用下面的 `rules` 规则，则需要在 `proxies` 或 `proxy-groups` 中手动配置一个 `name` 为 `PROXY` 的 policy。
-
-```yaml
-rules:
-  - RULE-SET,applications,DIRECT
-  - RULE-SET,proxy-applications,PROXY
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,tld-not-cn,PROXY
-  - RULE-SET,gfw,PROXY
-  - RULE-SET,greatfire,PROXY
-  - RULE-SET,telegramcidr,PROXY
-  - MATCH,DIRECT
-```
-
-## 激赏 | Donation
-
-**比特币（BTC）地址**：bc1qfe4nxcanet4w4ph8pf6qqyf263y68vw26nv9j9
-
-## 致谢
-
-- [@Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)
-- [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
-- [@Loyalsoldier/cn-blocked-domain](https://github.com/Loyalsoldier/cn-blocked-domain)
-- [@gfwlist/gfwlist](https://github.com/gfwlist/gfwlist)
-- [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
-- [@felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
-- [@17mon/china_ip_list](https://github.com/17mon/china_ip_list)
-
 
