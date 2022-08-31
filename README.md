@@ -116,7 +116,14 @@ rule-providers:
     url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-applications.txt"
     path: ./ruleset/proxy-applications.yaml
     interval: 86400
-  
+    
+  Steam:
+    type: http
+    behavior: classical
+    path: ./ruleset/steam.yaml
+    url: https://raw.fastgit.org/Semporia/ClashX-Pro/master/Filter/Steam.yaml
+    interval: 86400
+
   epicgames:
     type: http
     behavior: domain
