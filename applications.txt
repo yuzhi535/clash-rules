@@ -44,3 +44,6 @@ payload:
   - PROCESS-NAME,uTorrent.exe
   - PROCESS-NAME,WebTorrent.exe
   - PROCESS-NAME,upc.exe
+  - PROCESS-NAME,qq.exe
+  - PROCESS-NAME,wechat.exe   
+  
