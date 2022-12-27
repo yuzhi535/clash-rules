@@ -1,0 +1,4 @@
+payload:
+  # Unbreak
+  # > Myself
+  - DOMAIN,store.steampowered.com
