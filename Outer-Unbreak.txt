@@ -1,4 +1,5 @@
 payload:
   # Unbreak
   # > Myself
-  - DOMAIN,store.steampowered.com
+  - DOMAIN, store.steampowered.com
+  - DOMAIN, steamcommunity.com
