@@ -15,120 +15,116 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
     path: ./ruleset/reject.yaml
     interval: 86400
-
   icloud:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
     path: ./ruleset/icloud.yaml
     interval: 86400
-
   apple:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
     path: ./ruleset/apple.yaml
     interval: 86400
-
   google:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/google.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
     path: ./ruleset/google.yaml
     interval: 86400
-
   proxy:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
     path: ./ruleset/proxy.yaml
     interval: 86400
-
   direct:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
     path: ./ruleset/direct.yaml
     interval: 86400
-
   private:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
     path: ./ruleset/private.yaml
     interval: 86400
-
   gfw:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
     path: ./ruleset/gfw.yaml
     interval: 86400
-
   greatfire:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/greatfire.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/greatfire.txt
     path: ./ruleset/greatfire.yaml
     interval: 86400
-
   tld-not-cn:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
     path: ./ruleset/tld-not-cn.yaml
     interval: 86400
-
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
-
   cncidr:
     type: http
     behavior: ipcidr
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
     path: ./ruleset/cncidr.yaml
     interval: 86400
-
   lancidr:
     type: http
     behavior: ipcidr
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
     path: ./ruleset/lancidr.yaml
     interval: 86400
-
   applications:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    url: https://git.rayjinx.com/kurisu/clash-rules/raw/branch/release/applications.txt
     path: ./ruleset/applications.yaml
     interval: 86400
-    
   proxy-applications:
     type: http
     behavior: classical
-    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/proxy-applications.txt"
+    url: https://cdn.jsdelivr.net/gh/yuzhi535/clash-rules@release/proxy-applications.txt
     path: ./ruleset/proxy-applications.yaml
     interval: 86400
-    
   Steam:
     type: http
     behavior: classical
     path: ./ruleset/steam.yaml
-    url: https://raw.fastgit.org/Semporia/ClashX-Pro/master/Filter/Steam.yaml
+    url: https://raw.fastgit.org/DivineEngine/Profiles/master/Clash/RuleSet/Extra/Game/Steam.yaml
     interval: 86400
-
   epicgames:
     type: http
     behavior: domain
-    url: "https://raw.fastgit.org/yuzhi535/clash-rules/release/epicgames.txt"
+    url: https://raw.fastgit.org/yuzhi535/clash-rules/release/epicgames.txt
     path: ./ruleset/epicgames.yaml
+    interval: 86400
+  Unbreak:
+    type: http
+    behavior: classical
+    url: https://raw.fastgit.org/DivineEngine/Profiles/master/Clash/RuleSet/Unbreak.yaml
+    path: ./ruleset/Unbreak.yaml
+    interval: 86400
+  OuterUnbreak:
+    type: http
+    behavior: classical
+    url: https://git.rayjinx.com/kurisu/clash-rules/raw/branch/release/Outer-Unbreak.txt
+    path: ./ruleset/OuterUnbreak.yaml
     interval: 86400
 ```
 
@@ -141,24 +137,26 @@ rule-providers:
 
 ```yaml
 rules:
-  - RULE-SET,applications,🎯 全球直连
-  - RULE-SET,epicgames,EpicGames
-  - RULE-SET,Steam,Steam
-  - RULE-SET,proxy-applications,🔰 节点选择
-  - DOMAIN,clash.razord.top,🎯 全球直连
-  - DOMAIN,yacd.haishan.me,🎯 全球直连
-  - RULE-SET,private,🎯 全球直连
-  - RULE-SET,reject,⛔️ 广告拦截
-  - RULE-SET,icloud,🔰 节点选择
-  - RULE-SET,apple,🔰 节点选择
-  - RULE-SET,google,🔰 节点选择
-  - RULE-SET,proxy,🔰 节点选择
-  - RULE-SET,direct,🎯 全球直连
-  - RULE-SET,lancidr,🎯 全球直连
-  - RULE-SET,cncidr,🎯 全球直连
-  - RULE-SET,telegramcidr,📲 电报信息
-  - GEOIP,LAN,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
-  - MATCH,🔰 节点选择
+- "RULE-SET,applications,\U0001F3AF 全球直连"
+- "RULE-SET, Unbreak, \U0001F530 节点选择"
+- "RULE-SET, OuterUnbreak, \U0001F530 节点选择"
+- "RULE-SET,proxy-applications,\U0001F530 节点选择"
+- "DOMAIN,clash.razord.top,\U0001F3AF 全球直连"
+- "DOMAIN,yacd.haishan.me,\U0001F3AF 全球直连"
+- "RULE-SET,private,\U0001F3AF 全球直连"
+- RULE-SET,reject,⛔️ 广告拦截
+- "RULE-SET,icloud,\U0001F530 节点选择"
+- "RULE-SET,apple,\U0001F530 节点选择"
+- "RULE-SET,google,\U0001F530 节点选择"
+- "RULE-SET,proxy,\U0001F530 节点选择"
+- "RULE-SET,direct,\U0001F3AF 全球直连"
+- "RULE-SET,lancidr,\U0001F3AF 全球直连"
+- "RULE-SET,cncidr,\U0001F3AF 全球直连"
+- "RULE-SET,telegramcidr,\U0001F4F2 电报信息"
+- RULE-SET,epicgames,EpicGames
+- RULE-SET,Steam,Steam
+- "GEOIP,LAN,\U0001F3AF 全球直连"
+- "GEOIP,CN,\U0001F3AF 全球直连"
+- "MATCH,\U0001F530 节点选择"
 ```
 
