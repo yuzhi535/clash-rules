@@ -3,3 +3,4 @@ payload:
   # > Myself
   - DOMAIN, store.steampowered.com
   - DOMAIN, steamcommunity.com
+  - DOMAIN, steam-chat.com
