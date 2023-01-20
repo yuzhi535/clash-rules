@@ -1,6 +1,6 @@
 payload:
   # Unbreak
   # > Myself
-  - DOMAIN, store.steampowered.com
-  - DOMAIN, steamcommunity.com
-  - DOMAIN, steam-chat.com
+  - DOMAIN-SUFFIX, store.steampowered.com
+  - DOMAIN-SUFFIX, steamcommunity.com
+  - DOMAIN-SUFFIX, steam-chat.com
