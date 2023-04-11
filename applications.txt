@@ -46,7 +46,8 @@ payload:
   - PROCESS-NAME,upc.exe
   - PROCESS-NAME,qq.exe
   - PROCESS-NAME,wechat.exe   
-    - PROCESS-NAME,qq.exe
+  - PROCESS-NAME,qq.exe
   - PROCESS-NAME,rustdesk.exe  
   - PROCESS-NAME,rustdesk   
-  
+  - PROCESS-NAME,fortnite.exe
+  - PROCESS-NAME,fortnite
