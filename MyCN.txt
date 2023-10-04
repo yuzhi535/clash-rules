@@ -2,4 +2,5 @@ payload:
   # MyCN
   # > Myself
   - DOMAIN-SUFFIX, b23.tv
+  - DOMAIN-SUFFIX, ieeexplore.ieee.org
   
